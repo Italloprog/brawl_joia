@@ -1,0 +1,13 @@
+{
+   "compilerOptions": {
+     "target": "ES6",
+     "module": "CommonJS",
+     "experimentalDecorators": true,
+     "emitDecoratorMetadata": true,
+     "useDefineForClassFields": false,
+     "strict": true,
+     "outDir": "./dist",
+     "resolveJsonModule": true
+   },
+   "exclude": ["node_modules", "dist"]
+ }
