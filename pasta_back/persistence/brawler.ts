@@ -4,20 +4,20 @@ import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 @Entity()
 export class Brawler{
     @PrimaryGeneratedColumn()
-    id: number | undefined;
+    id!: number;
 
     @Column()
-    name: string;
+    name!: string;
 
     @Column()
-    descricao: string;
+    descricao!: string;
 
     @Column()
-    imagem: string;
+    imagem!: string;
 
-    constructor(name:string,descricao:string,image:string){
-        this.name = name;
-        this.descricao = descricao;
-        this.imagem = image;
+    constructor(name?:string, descricao?: string, imagem?:string){
+        if(name) this.name = name;
+        if(descricao) this.descricao = descricao;
+        if (imagem) this.imagem = imagem;
     }
 }
