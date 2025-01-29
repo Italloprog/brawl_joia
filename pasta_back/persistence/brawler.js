@@ -59,15 +59,18 @@ var Brawler = function () {
     var _imagem_initializers = [];
     var _imagem_extraInitializers = [];
     var Brawler = _classThis = /** @class */ (function () {
-        function Brawler_1(name, descricao, image) {
+        function Brawler_1(name, descricao, imagem) {
             this.id = __runInitializers(this, _id_initializers, void 0);
             this.name = (__runInitializers(this, _id_extraInitializers), __runInitializers(this, _name_initializers, void 0));
             this.descricao = (__runInitializers(this, _name_extraInitializers), __runInitializers(this, _descricao_initializers, void 0));
             this.imagem = (__runInitializers(this, _descricao_extraInitializers), __runInitializers(this, _imagem_initializers, void 0));
             __runInitializers(this, _imagem_extraInitializers);
-            this.name = name;
-            this.descricao = descricao;
-            this.imagem = image;
+            if (name)
+                this.name = name;
+            if (descricao)
+                this.descricao = descricao;
+            if (imagem)
+                this.imagem = imagem;
         }
         return Brawler_1;
     }());
