@@ -81,7 +81,7 @@ function ComponenteAlterar({ id_brawler }: { id_brawler: number }) {
 
   return (
     <>
-      <button onClick={() => SetForm_alterar(true)}> Alterar </button>
+      <button onClick={() => SetForm_alterar(!form_alterar)}> Alterar </button>
       {form_alterar && <FormUpt SetForm_alterar={SetForm_alterar} id_brawler={id_brawler} />}
     </>
   )
@@ -150,7 +150,7 @@ function ComponenteAdicionar() {
   return (
     <div className='addBox'>
     <div className='add'>
-      <button className='addButton' onClick={() => { SetForm_adicionar(true) }}>Adicionar</button>
+      <button className='addButton' onClick={() => { SetForm_adicionar(!form_adicionar) }}>Adicionar</button>
 
       <div className='formAdd'>
         {form_adicionar &&
